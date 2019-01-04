@@ -6,43 +6,84 @@
 	<title>Portfolio</title>  
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 
 </head>
 <body>
 	<div class="top-bar">
 		<div class="logo">
-			<h1>ERYK LIZUREJ</h1>
+			<h1>Karol Borecki</h1>
 			<h4>Portfolio</h4>
 		</div>
 		<div class="menu">
 			<nav id="nav" class="">
-				<a href="">HOME</a>
-				<a href="">ALBUMS</a>
-				<a href="">EVENTS</a>
- 				<a href="">GALLERY</a>
- 				<a href="">VIDEO</a>
- 				<a href="">BLOG</a>
-  				</a>
+				<a onclick="myFunction('home')">HOME</a>
+                <a onclick="myFunction('projects')">PROJECTS</a>
+				<a onclick="myFunction('aboutme')">ABOUT ME</a>
+ 				<a onclick="myFunction('contact')">CONTACT</a>
+ 				<a onclick="myFunction('skills')">SKILLS</a>
 			</nav>
 		</div>
 	</div>
 
 	<div id="home" class="introduction">
-		<h1>HELLO</h1>
-		<h4>My name is Eryk and i'm gay</h4>
+		<h1>Welcome!</h1>
+		<h4>My name is Karol and I'm a mobile developer</h4>
 		<button>Show me more</button>
 	</div>
-
-	<div id="home" class="introduction">
-		<h1>HELLO</h1>
-		<h4>My name is Eryk and i'm gay</h4>
-		<button>Show me more</button>
+    <div id="projects" class="introduction" style="display: none;">
+		<h1>My Projects:</h1>
+	</div> 
+    <div id="aboutme" class="aboutme introduction" style="display: none;">
+		<h1>About me:</h1>
+        <img src="me.JPEG">
+        <h4>
+            My name is Karol and I'm from Poland. I'm 17 years old and I'm a high school student. I love programming since the beginning and I would love to keep develope myself by making new projects and meeting new persons whom I could learn something. Mostly i write mobile games or apps but I can much more! Check out my projects and get know what i can!
+        </h4>
+	</div>
+    
+    <div id="contact" class="contact introduction" style="display: none;">
+		<h1>Contact to me:</h1>
+        <div class="contactline">
+            <img src="gmail.png">
+            <h4>karol.boreck@gmail.com</h4>
+        </div>
+        <div class="contactline">
+            <img src="facebook.png">
+            <h4>/Karol.Borecki</h4>
+        </div>
+        <div class="contactline">
+            <img src="github.png">
+            <h4>/KarolBorecki</h4>
+        </div>
+	</div>
+    
+    <div id="skills" class="skills introduction" style="display: none;">
+		<h1>Here is in what I'm working:</h1>
+        <img src="python.png">
+        <img src="c.png">
+        <img src="kivy.png">
+        <img src="django.png">
+        <img src="unity.png">
+        <img src="html.png">
+        <img src="css.png">
 	</div>
 
 	<footer class="footer">
 		<p>&copy Karol Borecki | 2018</p>
 	</footer>
+    
+    <script type="text/javascript">
+        var last = document.getElementById("home");
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.style.display === "none") {
+            last.style.display = "none";
+            last = x;
+            x.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>
